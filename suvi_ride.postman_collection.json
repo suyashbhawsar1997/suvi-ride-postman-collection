@@ -1,0 +1,2403 @@
+{
+	"info": {
+		"_postman_id": "82959c0a-f49f-49e0-8024-c1350c35af37",
+		"name": "suvi_ride",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24286223"
+	},
+	"item": [
+		{
+			"name": "custmer",
+			"item": [
+				{
+					"name": "Customer Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"language\":\"64009544361aa5f1d2c9227d\",\r\n    \"mobileNumber\":9644221885\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/customer/custmerLogin",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"customer",
+								"custmerLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Customer Registration",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNumber\":1234567890,\r\n    \"fullName\":\"preeti\",\r\n    \"email\":\"preeti@gmail.com\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/customer/customerRegistration",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"customer",
+								"customerRegistration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All cutomers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/customer/totalUser",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"customer",
+								"totalUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://rslsofttech.com:7000/customer/allRidesByCustomer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDBlYmE3NGQ3OGU2OGJjMzNhMmFkMzMiLCJtb2JpbGVOdW1iZXIiOjExMTExMTExMTIsImxhbmd1YWdlIjoiZW5nbGlzaCIsImZ1bGxOYW1lIjoiaGVsbG8iLCJlbWFpbCI6InByZWV0aUBnbWFpbC5jb20iLCJpYXQiOjE2ODE5ODc3NjV9.r-gyDS4CGpPFrctU14Jq3EOdUYOnXNEizpuJcPVmf54",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/customer/allRidesByCustomer",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"customer",
+								"allRidesByCustomer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "driver",
+			"item": [
+				{
+					"name": "Driver Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n{\r\n    \"language\":\"64009530361aa5f1d2c9227a\",\r\n    \"mobileNumber\":\"+910000000011\",\r\n    \"deviceToken\":\"prishavo0wfGTlmUJ-_PUMN0tJ:APA91bGoBGE7E4qLnHZphbUQed3zA1uLrSv6vqWFVbbVuKUFU9pX5A2xQyzIvR3UaVu20OehSJTJwf2xYZaWUiCD11H7ikU-0TlC7RnNK7ri0vD9s__F0bQ2Uq-EomUsfAT0AECWhXTP\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/driverLogin",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"driverLogin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "OTP Verification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mobileNumber\":9644221884,\r\n    \"otp\":2860\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/driverAppOtpVerification",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"driverAppOtpVerification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Driving Licence",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobileNumber",
+									"value": "910000000011",
+									"type": "text"
+								},
+								{
+									"key": "fullName",
+									"value": "shyam",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "11 d prajapat nagar",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "licenceNumber",
+									"value": "A123388AYF223",
+									"type": "text"
+								},
+								{
+									"key": "issuedDate",
+									"value": "1/2/2000",
+									"type": "text"
+								},
+								{
+									"key": "validitiy",
+									"value": "2/2/2020",
+									"type": "text"
+								},
+								{
+									"key": "uploadImage",
+									"type": "file",
+									"src": "/C:/Users/dell/Pictures/Screenshot 2022-11-28 102916.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/drivingLicence",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"drivingLicence"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehicle Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0MmVhNThkYTAzNGIwMmI1NmI1YzU5YSIsIm1vYmlsZU51bWJlciI6OTE3MzU0MjEyMDA3LCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJmYWlsZWQiLCJ2ZWhpY2xlVHlwZSI6ImF1dG8iLCJjdXJyZW50TG9jYXRpb24iOnt9LCJoYXNSaWRlIjpmYWxzZSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsIlN0YXR1cyI6Im9mZmxpbmUiLCJpYXQiOjE2ODA3Nzg2NjR9.T4YjqktDULP4yqp4E8WUb79zVI64TVnHQOibczTQWsU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "vehicleModelNumber",
+									"value": "MH25264",
+									"type": "text"
+								},
+								{
+									"key": "registrationID",
+									"value": "FDY6686G",
+									"type": "text"
+								},
+								{
+									"key": "dateofRegistration",
+									"value": "2/2/2000",
+									"type": "text"
+								},
+								{
+									"key": "registrationValidity",
+									"value": "3/3/2020",
+									"type": "text"
+								},
+								{
+									"key": "imageOfRegistrationCard",
+									"type": "file",
+									"src": "/C:/Users/dell/Pictures/Screenshot 2022-11-28 102916.png"
+								},
+								{
+									"key": "vehicleType",
+									"value": "auto",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/vehicleDetails",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"vehicleDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Vehicals name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/getAllVehicals",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"getAllVehicals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Bank Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0MmVhNThkYTAzNGIwMmI1NmI1YzU5YSIsIm1vYmlsZU51bWJlciI6OTE3MzU0MjEyMDA3LCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJmYWlsZWQiLCJ2ZWhpY2xlVHlwZSI6ImF1dG8iLCJjdXJyZW50TG9jYXRpb24iOnt9LCJoYXNSaWRlIjpmYWxzZSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsIlN0YXR1cyI6Im9mZmxpbmUiLCJpYXQiOjE2ODA3Nzg2NjR9.T4YjqktDULP4yqp4E8WUb79zVI64TVnHQOibczTQWsU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"accountNumber\":\"1236778787\",\r\n    \"IFSC\":\"1324fr454\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/addBankDetails",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"addBankDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Take Selfie",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0MmVhNThkYTAzNGIwMmI1NmI1YzU5YSIsIm1vYmlsZU51bWJlciI6OTE3MzU0MjEyMDA3LCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJmYWlsZWQiLCJ2ZWhpY2xlVHlwZSI6ImF1dG8iLCJjdXJyZW50TG9jYXRpb24iOnt9LCJoYXNSaWRlIjpmYWxzZSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsIlN0YXR1cyI6Im9mZmxpbmUiLCJpYXQiOjE2ODA3Nzg2NjR9.T4YjqktDULP4yqp4E8WUb79zVI64TVnHQOibczTQWsU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "selfie",
+									"type": "file",
+									"src": "/C:/Users/dell/Pictures/Screenshot 2022-11-28 102916.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/takeSelfie",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"takeSelfie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Rides Packages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/getAllRidesPackages",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"getAllRidesPackages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CF Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderAmount\":1500\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/cftoken",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"cftoken"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pyment Transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0NTBlN2FmYzFhNDRiY2Y2ZDA5M2M5MCIsIm1vYmlsZU51bWJlciI6OTE5NTg5MzkzNTU1LCJmdWxsTmFtZSI6ImFudXJhZyBzaW5naCAiLCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJ2ZXJpZmllZCIsInZlaGljbGVUeXBlIjoiQmlrZSIsImN1cnJlbnRMb2NhdGlvbiI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6Wzc1Ljg3MjcxMjIsMjIuNzE4NDQzXX0sImN1cnJlbnRSaWRlIjpbXSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsImlhdCI6MTY4MzA5NTAwNn0.FYY_h_bCBrTpmM095lpAOsodnqKs765K2ZDXVTDzkNY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paymentMode\":\"UPI\",\r\n    \"orderId\":\"1234567890123456\",\r\n    \"packageId\":\"644a466017e7e4854d967806\",\r\n    \"status\":\"OK\",\r\n    \"txTime\":\"2023-04-27 20:39:34\",\r\n    \"referenceId\":\"1491412362\",\r\n    \"txMsg\":\"Transaction Successful\",\r\n    \"signature\":\"yEiq6v2mDs3x9L4hghlXCcHom5LQSr8yLTB4mCUh43E=\",\r\n    \"orderAmount\":\"200.00\",\r\n    \"txStatus\":\"SUCCESS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/paymentTransaction",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"paymentTransaction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Collect Payment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rideId\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/collectPayment",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"collectPayment"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Payment Verification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0NGE3OGU0ODVlNWE2NGNiYWQ4ZjEwYyIsIm1vYmlsZU51bWJlciI6OTE4NjQxMDMxOTgyLCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJmYWlsZWQiLCJ2ZWhpY2xlVHlwZSI6ImF1dG8iLCJjdXJyZW50TG9jYXRpb24iOnsidHlwZSI6IlBvaW50IiwiY29vcmRpbmF0ZXMiOlswLDBdfSwiY3VycmVudFJpZGUiOltdLCJwYXNzZW5nZXJDYXBhY2l0eSI6NCwiU3RhdHVzIjoib2ZmbGluZSIsImlhdCI6MTY4MjYwMjI5MH0.uv17DLuGCAkkvhQJSVMe1JLv7een2gUlac8d1IgXNyA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paymentMode\":\"UPI\",\r\n    \"orderId\":\"643d29af7780194c57f39c07\",\r\n    \"status\":\"OK\",\r\n    \"txTime\":\"2023-04-27 20:39:34\",\r\n    \"referenceId\":\"1491412362\",\r\n    \"txMsg\":\"Transaction Successful\",\r\n    \"signature\":\"yEiq6v2mDs3x9L4hghlXCcHom5LQSr8yLTB4mCUh43E=\",\r\n    \"orderAmount\":\"500.00\",\r\n    \"txStatus\":\"SUCCESS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/paymentVerification",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"paymentVerification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Document Submission",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0NThjYjhkMTk4NTM0ZWI1ODhiMWQ3NiIsIm1vYmlsZU51bWJlciI6OTE5NjQ0NzA3NDg1LCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJmYWlsZWQiLCJ2ZWhpY2xlVHlwZSI6ImF1dG8iLCJjdXJyZW50TG9jYXRpb24iOnsidHlwZSI6IlBvaW50IiwiY29vcmRpbmF0ZXMiOlswLDBdfSwiY3VycmVudFJpZGUiOltdLCJwYXNzZW5nZXJDYXBhY2l0eSI6NCwiU3RhdHVzIjoib2ZmbGluZSIsImlhdCI6MTY4MzU0MDk4M30.Ir7reYiiIFKkgwAJib-G8b8FKxmfdVN_TMvfNY6wzbQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/documentSubmission",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"documentSubmission"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Document Verification",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0NThiZjU5NjNjMzNiMjE1MmZiMjQxMSIsIm1vYmlsZU51bWJlciI6OTE3MzU0MjEyMDA3LCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJmYWlsZWQiLCJjdXJyZW50TG9jYXRpb24iOnsidHlwZSI6IlBvaW50IiwiY29vcmRpbmF0ZXMiOlswLDBdfSwiaGFzUmlkZSI6ZmFsc2UsInBhc3NlbmdlckNhcGFjaXR5Ijo0LCJTdGF0dXMiOiJvZmZsaW5lIiwiaWF0IjoxNjgzNTQ4NDIwfQ.khBwi7YnVTrnbNA2_J2zVqL7_QjKcLtgafpMNQ8q4hs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/documentsVerification",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"documentsVerification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Remaining And Total Rides",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0NTBlN2FmYzFhNDRiY2Y2ZDA5M2M5MCIsIm1vYmlsZU51bWJlciI6OTE5NTg5MzkzNTU1LCJmdWxsTmFtZSI6ImFudXJhZyBzaW5naCAiLCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJ2ZXJpZmllZCIsInZlaGljbGVUeXBlIjoiQmlrZSIsImN1cnJlbnRMb2NhdGlvbiI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6Wzc1Ljg3MjcxMjIsMjIuNzE4NDQzXX0sImN1cnJlbnRSaWRlIjpbXSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsImlhdCI6MTY4MzA5NTAwNn0.FYY_h_bCBrTpmM095lpAOsodnqKs765K2ZDXVTDzkNY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/getremainingAndTotalRides",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"getremainingAndTotalRides"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update Driver Status",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0NTBlN2FmYzFhNDRiY2Y2ZDA5M2M5MCIsIm1vYmlsZU51bWJlciI6OTE5NTg5MzkzNTU1LCJmdWxsTmFtZSI6ImFudXJhZyBzaW5naCAiLCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJ2ZXJpZmllZCIsInZlaGljbGVUeXBlIjoiQmlrZSIsImN1cnJlbnRMb2NhdGlvbiI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6Wzc1Ljg3MjcxMjIsMjIuNzE4NDQzXX0sImN1cnJlbnRSaWRlIjpbXSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsImlhdCI6MTY4MzA5NTAwNn0.FYY_h_bCBrTpmM095lpAOsodnqKs765K2ZDXVTDzkNY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Status\":\"offline\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/updateDriverStatus",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"updateDriverStatus"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Driver Current Location",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0MmVhNThkYTAzNGIwMmI1NmI1YzU5YSIsIm1vYmlsZU51bWJlciI6OTE3MzU0MjEyMDA3LCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJmYWlsZWQiLCJ2ZWhpY2xlVHlwZSI6ImF1dG8iLCJjdXJyZW50TG9jYXRpb24iOnt9LCJoYXNSaWRlIjpmYWxzZSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsIlN0YXR1cyI6Im9mZmxpbmUiLCJpYXQiOjE2ODA3Nzg2NjR9.T4YjqktDULP4yqp4E8WUb79zVI64TVnHQOibczTQWsU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"latitude\":40.749078,\r\n    \"longitude\": -73.985369\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/updateCurrentLocation/642ea58da034b02b56b5c59a",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"updateCurrentLocation",
+								"642ea58da034b02b56b5c59a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Accept Ride Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0NTBlN2FmYzFhNDRiY2Y2ZDA5M2M5MCIsIm1vYmlsZU51bWJlciI6OTE5NTg5MzkzNTU1LCJmdWxsTmFtZSI6ImFudXJhZyBzaW5naCAiLCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJ2ZXJpZmllZCIsInZlaGljbGVUeXBlIjoiQmlrZSIsImN1cnJlbnRMb2NhdGlvbiI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6Wzc1Ljg3MjcxMjIsMjIuNzE4NDQzXX0sImN1cnJlbnRSaWRlIjpbXSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsImlhdCI6MTY4MzA5NTAwNn0.FYY_h_bCBrTpmM095lpAOsodnqKs765K2ZDXVTDzkNY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ride_id\":\"6450ec5d874d205ebb36e661\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/acceptRideRequest",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"acceptRideRequest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Decline Ride Request",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0NTBlN2FmYzFhNDRiY2Y2ZDA5M2M5MCIsIm1vYmlsZU51bWJlciI6OTE5NTg5MzkzNTU1LCJmdWxsTmFtZSI6ImFudXJhZyBzaW5naCAiLCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJ2ZXJpZmllZCIsInZlaGljbGVUeXBlIjoiQmlrZSIsImN1cnJlbnRMb2NhdGlvbiI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6Wzc1Ljg3MjcxMjIsMjIuNzE4NDQzXX0sImN1cnJlbnRSaWRlIjpbXSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsImlhdCI6MTY4MzA5NTAwNn0.FYY_h_bCBrTpmM095lpAOsodnqKs765K2ZDXVTDzkNY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ride_id\":\"6450eaadc1a44bcf6d093d17\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/declineRideRequest",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"declineRideRequest"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Navigate To Pickup Point",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"pickupLatitude\":37.7749,\r\n\"pickupLongitude\":-122.4194,\r\n\"currentLocation\": [37.7733,-122.4203],\r\n\"distance\": 800\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/navigateToPickupPoint",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"navigateToPickupPoint"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Enter Otp Screen",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rideId\":\"642fcc50dafd25bbc9124646\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/enterOtp",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"enterOtp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Start Ride",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rideId\":\"642fcc50dafd25bbc9124646\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/startRide",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"startRide"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Reached To Destination",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n\"destinationLatitude\":37.7749,\r\n\"destinationLongitude\":-122.4194,\r\n\"latitude\":37.7733,\r\n\"longitude\":-122.4203,\r\n\r\n\"distance\": 750\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/reachedToDestination",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"reachedToDestination"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Complete Ride",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0MmE2MjkyODRiYzZiMzcwNDc3NjA4ZiIsIm1vYmlsZU51bWJlciI6OTE5NjQ0NzA3NDg5LCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJmYWlsZWQiLCJ2ZWhpY2xlVHlwZSI6ImF1dG8iLCJjdXJyZW50TG9jYXRpb24iOnt9LCJoYXNSaWRlIjpmYWxzZSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsIlN0YXR1cyI6Im9mZmxpbmUiLCJpYXQiOjE2ODA1MDE5OTR9.2wNFlT18vSC-yt8E8nVEeFwagJxGnPKxLwjjpw22v9k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ride_id\":\"642fcc50dafd25bbc9124646\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/completeRide",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"completeRide"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Driver Ratting",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0MmVhNThkYTAzNGIwMmI1NmI1YzU5YSIsIm1vYmlsZU51bWJlciI6OTE3MzU0MjEyMDA3LCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJmYWlsZWQiLCJ2ZWhpY2xlVHlwZSI6ImF1dG8iLCJjdXJyZW50TG9jYXRpb24iOnt9LCJoYXNSaWRlIjpmYWxzZSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsIlN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTY4MDc3OTU3OH0.bVxRFpNF1BXIPPSstvflSGb1vmrnvgX4iSOMfNrjgNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rideId\":\"642ab676a87eb94fb92e17f2\",\r\n    \"driverRating\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/driverRatting",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"driverRatting"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Total Earning",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0NTIzMjU5NmM3ZjhhOWQ2OWJiNTEwMSIsIm1vYmlsZU51bWJlciI6OTE5NjQ0NzA3NDg1LCJmdWxsTmFtZSI6ImFha2FzaCAiLCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJ2ZXJpZmllZCIsInZlaGljbGVUeXBlIjoiQmlrZSIsImN1cnJlbnRMb2NhdGlvbiI6eyJ0eXBlIjoiUG9pbnQiLCJjb29yZGluYXRlcyI6Wzc1Ljg3MjY3MTEsMjIuNzE4NDk1MV19LCJjdXJyZW50UmlkZSI6W10sInBhc3NlbmdlckNhcGFjaXR5Ijo0LCJpYXQiOjE2ODMyNjcyMzB9.GrBqf0jqGIPUgSqLnRdo6dcMmFV_1Fqi3Z8PpLwaXLo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/totalEarning",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"totalEarning"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Rides",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0MmVhNThkYTAzNGIwMmI1NmI1YzU5YSIsIm1vYmlsZU51bWJlciI6OTE3MzU0MjEyMDA3LCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJmYWlsZWQiLCJ2ZWhpY2xlVHlwZSI6ImF1dG8iLCJjdXJyZW50TG9jYXRpb24iOnt9LCJoYXNSaWRlIjpmYWxzZSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsIlN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTY4MDc3OTU3OH0.bVxRFpNF1BXIPPSstvflSGb1vmrnvgX4iSOMfNrjgNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\":\"Completed\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/getAllRides",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"getAllRides"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Total Rides",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0MmViMGIzNGU1ZmZhMWZmMzBkM2MwYSIsIm1vYmlsZU51bWJlciI6OTE5NjQ0NzA3NDg1LCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJmYWlsZWQiLCJ2ZWhpY2xlVHlwZSI6ImF1dG8iLCJjdXJyZW50TG9jYXRpb24iOnt9LCJoYXNSaWRlIjpmYWxzZSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsIlN0YXR1cyI6Im9mZmxpbmUiLCJpYXQiOjE2ODA3ODE1Mjd9.ronFsCHhndfiCsa-dgGjIdwZDWUXVcV6PBgwDFvbtWg",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/getTotalRides",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"getTotalRides"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Personal Details",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0MmVhNThkYTAzNGIwMmI1NmI1YzU5YSIsIm1vYmlsZU51bWJlciI6OTE3MzU0MjEyMDA3LCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJmYWlsZWQiLCJ2ZWhpY2xlVHlwZSI6ImF1dG8iLCJjdXJyZW50TG9jYXRpb24iOnt9LCJoYXNSaWRlIjpmYWxzZSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsIlN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTY4MDc3OTU3OH0.bVxRFpNF1BXIPPSstvflSGb1vmrnvgX4iSOMfNrjgNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "mobileNumber",
+									"value": "+917354212000",
+									"type": "text"
+								},
+								{
+									"key": "fullName",
+									"value": "ksdfjhskdf",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "sjkdfhfkff",
+									"type": "text"
+								},
+								{
+									"key": "profilePhoto",
+									"type": "file",
+									"src": "/C:/Users/dell/Pictures/Screenshot 2022-11-28 102916.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/updatePersonalDetails",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"updatePersonalDetails"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Driver",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/deleteDriver/6412abb0721f3e02c3b4d096",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"deleteDriver",
+								"6412abb0721f3e02c3b4d096"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Write To Us",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0MmVhNThkYTAzNGIwMmI1NmI1YzU5YSIsIm1vYmlsZU51bWJlciI6OTE3MzU0MjEyMDA3LCJ2ZXJpZmljYXRpb25TdGF0dXMiOiJmYWlsZWQiLCJ2ZWhpY2xlVHlwZSI6ImF1dG8iLCJjdXJyZW50TG9jYXRpb24iOnt9LCJoYXNSaWRlIjpmYWxzZSwicGFzc2VuZ2VyQ2FwYWNpdHkiOjQsIlN0YXR1cyI6Im9ubGluZSIsImlhdCI6MTY4MDc3OTU3OH0.bVxRFpNF1BXIPPSstvflSGb1vmrnvgX4iSOMfNrjgNw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subject\":\"not getting rides \",\r\n    \"emailId\":\"add@gmail.com\",\r\n    \"describeYourIssue\":\"i am not getting any ride\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/writeToUs",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"writeToUs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Driver Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0MjE3NjgxYWU0ZWFkOGVjNzE5ZWVkZSIsIm1vYmlsZU51bWJlciI6MTIzNjc3ODc4OSwidmVyaWZpY2F0aW9uU3RhdHVzIjoiZmFpbGVkIiwidmVoaWNsZVR5cGUiOiJhdXRvIiwiY3VycmVudExvY2F0aW9uIjp7fSwiaGFzUmlkZSI6ZmFsc2UsInBhc3NlbmdlckNhcGFjaXR5Ijo0LCJTdGF0dXMiOiJvZmZsaW5lIiwiaWF0IjoxNjc5OTE2NTc3fQ.3i8p4BQEk2IzWhOuS4XOWxGKDXL10gd2_5GfTC1oJUA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/driverLogout",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"driverLogout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "Add Ride Packages",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"pack 1\",\r\n    \"price\":1500,\r\n\"totalRides\":300,\r\n\"description\":\"Make Payment of rs 1500 and get 300 rides\",\r\n\"velidity\":\"Unlimited\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/addRidePackages",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"addRidePackages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Languages",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"panjabi\",\r\n    \"code\":\"pn\",\r\n    \"status\":\"inactive\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/addLanguages",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"addLanguages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Languages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/getAllLanguages",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"getAllLanguages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Language",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"hindi\",\r\n    \"code\":\"hi\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/editLanguage/63ff40db9704702669c04606",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"editLanguage",
+								"63ff40db9704702669c04606"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Screens",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"appScreens\":\"customerScreens\",\r\n    \"screenName\":\"hjkdfs\",\r\n    \"description\":\"fskjhxs\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/addScreens",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"addScreens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Driver",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/deleteDriver/640eafcdd78e68bc33a2ad09",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"deleteDriver",
+								"640eafcdd78e68bc33a2ad09"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Screens",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"language\":\"64009544361aa5f1d2c9227d\",\r\n    \"appScreens\":\"customerScreens\"\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/getAllScreens",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"getAllScreens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customer App Screens",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/getAllCustomerScreens",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"getAllCustomerScreens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Language",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/deleteLanguage/64018214361aa5f1d2c922ad",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"deleteLanguage",
+								"64018214361aa5f1d2c922ad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Driver App Screens",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/getAllDriverScreens",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"getAllDriverScreens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer Screen By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/getCustomerScreensById/6400959f361aa5f1d2c92284",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"getCustomerScreensById",
+								"6400959f361aa5f1d2c92284"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Driver Screen By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/getDriverScreensById/6411c448bdb60bea96284097",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"getDriverScreensById",
+								"6411c448bdb60bea96284097"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Screens",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"screenName\":\"login\",\r\n    \"description\":\"login screen\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/editScreens/63ff49ade6f3f9d34981fa60",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"editScreens",
+								"63ff49ade6f3f9d34981fa60"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Label Codes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n   \r\n    \"labels\":[\r\n        {\r\n            \"screenName\":\"640095b1361aa5f1d2c92287\",\r\n            \"labelCode\":\"name\",\r\n            \"language\":\"64009544361aa5f1d2c9227d\",\r\n            \"appScreens\":\"customerScreens\",\r\n            \"labelText\":\"pleas enter name\",\r\n            \"errorText\":\"\",\r\n            \"helpText\":\"\"\r\n        },\r\n         {\r\n            \"screenName\":\"640095b1361aa5f1d2c92287\",\r\n            \"labelCode\":\"name\",\r\n            \"language\":\"64009560361aa5f1d2c92280\",\r\n            \"appScreens\":\"customerScreens\",\r\n            \"labelText\":\"pleas enter name\",\r\n            \"errorText\":\"\",\r\n            \"helpText\":\"\"\r\n        }\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/addLabalCodes",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"addLabalCodes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Label Codes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"appScreens\":\"customerScreens\"\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/getAllLabalCodes/6400959f361aa5f1d2c92284",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"getAllLabalCodes",
+								"6400959f361aa5f1d2c92284"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Screens By Language",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"language\":\"64009544361aa5f1d2c9227d\",\r\n    \"appScreens\":\"customerScreens\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/getAllScreensByLanguage",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"getAllScreensByLanguage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Document Verification By Admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0MGZmZDVjMjdjYmNjMDcwZjZmM2NiMiIsImxhbmd1YWdlIjoibWFyYXRoaSIsIm1vYmlsZU51bWJlciI6MTIzNDU2Nzg5MCwidmVyaWZpY2F0aW9uU3RhdHVzIjoiZmFpbGVkIiwidmVoaWNsZVR5cGUiOiJhdXRvIiwiY3VycmVudExvY2F0aW9uIjp7fSwiaGFzUmlkZSI6ZmFsc2UsInBhc3NlbmdlckNhcGFjaXR5Ijo0LCJTdGF0dXMiOiJvZmZsaW5lIiwiaWF0IjoxNjc4NzgzMTE0fQ.SE7bynUsZmQeBjecFa6U91VhxA3IKqmFujs4HlbQgWE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/documentsVerificationByAdmin",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"documentsVerificationByAdmin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Vehical Type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "auto",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "go safe",
+									"type": "text"
+								},
+								{
+									"key": "perKmCharge",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "gateWayFee",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "cancellationFee",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "waitingFeePermin",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "baseFare",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "hourFare",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "farePerMin",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "seats",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "lateNightFare",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "relaxationTimeInMins",
+									"value": "2:1",
+									"type": "text"
+								},
+								{
+									"key": "lateNightStartTime",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "lateNightEndTime",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "uploadVehicleImage",
+									"type": "file",
+									"src": "/C:/Users/dell/Pictures/Screenshot 2022-11-28 102916.png"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/addVehicleType",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"addVehicleType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Vehical Type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/getAllvehicleType",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"getAllvehicleType"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Language By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/languageGetById/6411ae95bdb60bea9628405a",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"languageGetById",
+								"6411ae95bdb60bea9628405a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vehical Type",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/deleteVehicalType/641843bedf51b7de3e028e26",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"deleteVehicalType",
+								"641843bedf51b7de3e028e26"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Drivers",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkcml2ZXJJZCI6IjY0MGZmZDVjMjdjYmNjMDcwZjZmM2NiMiIsImxhbmd1YWdlIjoibWFyYXRoaSIsIm1vYmlsZU51bWJlciI6MTIzNDU2Nzg5MCwidmVyaWZpY2F0aW9uU3RhdHVzIjoiZmFpbGVkIiwidmVoaWNsZVR5cGUiOiJhdXRvIiwiY3VycmVudExvY2F0aW9uIjp7fSwiaGFzUmlkZSI6ZmFsc2UsInBhc3NlbmdlckNhcGFjaXR5Ijo0LCJTdGF0dXMiOiJvZmZsaW5lIiwiaWF0IjoxNjc4NzgzMTE0fQ.SE7bynUsZmQeBjecFa6U91VhxA3IKqmFujs4HlbQgWE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/driver/totalDrivers",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"driver",
+								"totalDrivers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Cutomer",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/customer/deleteCustomer/640ad1d515f6a67980a182c7",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"customer",
+								"deleteCustomer",
+								"640ad1d515f6a67980a182c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Label Codes By Id",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"appScreens\":\"customerScreens\"\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/getAllLabelCodesById/6400959f361aa5f1d2c92284",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"getAllLabelCodesById",
+								"6400959f361aa5f1d2c92284"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Rides Packages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8000/driver/getAllRidesPackages",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"driver",
+								"getAllRidesPackages"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Driver Offers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"offerName\":\"Bike Offer\",\r\n    \"vehicalType\":\"Bike\",\r\n    \"discountInPercent\":\"5 %\",\r\n    \"description\":\"You can redeem this discount on your next rechage\",\r\n    \"status\":\"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/addDriverOffers",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"addDriverOffers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Driver Offer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"offerName\":\"Bike Offer\",\r\n    \"vehicalType\":\"Bike\",\r\n    \"discountInPercent\":\"5%\",\r\n    \"description\":\"You can redeem this discount on your next rechage\",\r\n    \"status\":\"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/editDriverOffer/646227845a8b92490d5fca66",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"editDriverOffer",
+								"646227845a8b92490d5fca66"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Driver Offers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/getDriverOffers",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"getDriverOffers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Driver Offer By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/getDriverOfferById/646227845a8b92490d5fca66",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"getDriverOfferById",
+								"646227845a8b92490d5fca66"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Driver Offer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/deleteDriverOffer/646227845a8b92490d5fca66",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"deleteDriverOffer",
+								"646227845a8b92490d5fca66"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Customer Offers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"offerName\":\"Get a discount on your first ride\",\r\n    \"offerCode\":\"SUVI01\",\r\n    \"discountInRs\":\"5 Rs\",\r\n    \"description\":\"Use SUVI01 and get discount on your first ride.\",\r\n    \"status\":\"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/addCustomerOffers",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"addCustomerOffers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Customer Offer",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"offerName\":\"Get a discount on your first ride\",\r\n    \"offerCode\":\"SUVI02\",\r\n    \"discountInRs\":\"5 Rs\",\r\n    \"description\":\"Use SUVI02 and get discount on your first ride.\",\r\n    \"status\":\"active\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/editCutomerOffer/64631cd9d9d25e19223e29cc",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"editCutomerOffer",
+								"64631cd9d9d25e19223e29cc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Customer Offers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/getCustomerOffers",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"getCustomerOffers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer Offer By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/getCustomerOfferById/64631cd9d9d25e19223e29cc",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"getCustomerOfferById",
+								"64631cd9d9d25e19223e29cc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer Offer",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/deleteCustomerOffer/64631cd9d9d25e19223e29cc",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"deleteCustomerOffer",
+								"64631cd9d9d25e19223e29cc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Customer By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/deleteCustomerByID/64548dca8b4bc90ae8be3783",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"deleteCustomerByID",
+								"64548dca8b4bc90ae8be3783"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete DriverBy Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/deleteDriverByID/64622a9fd9d25e19223e1b87",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"deleteDriverByID",
+								"64622a9fd9d25e19223e1b87"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Rides Of Customer ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://rslsofttech.com:7000/admin/adminGetAllRidesByCustomer/6450e6b1c1a44bcf6d093c78",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"admin",
+								"adminGetAllRidesByCustomer",
+								"6450e6b1c1a44bcf6d093c78"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "website",
+			"item": [
+				{
+					"name": "https://rslsofttech.com:7000/website/contactUs",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"preeti\",\r\n    \"mobileNumber\":2354677888,\r\n    \"email\":\"preeti@rslsofttech.com\",\r\n    \"message\":\"hello\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://rslsofttech.com:7000/website/contactUs",
+							"protocol": "https",
+							"host": [
+								"rslsofttech",
+								"com"
+							],
+							"port": "7000",
+							"path": [
+								"website",
+								"contactUs"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
